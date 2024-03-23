@@ -1,3 +1,133 @@
 body {
-    background: rgb(89, 255, 0);
-}
+    background: black;
+    font-family: 'General Sans', sans-serif;
+  }
+  
+  /* Layout */
+  /* Page Wrapper */
+  main {
+  
+    /*  make two colums  */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  
+  /* Article */
+  article {
+    display: flex;
+    flex-direction: column;
+    
+  /* vertical and horizontal alignment */
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+  }
+  
+  /* Stuff inside of article */
+  article h1 {
+   font-size: 2.5rem;
+   color: white;
+  }
+  
+  article p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 1.5rem;
+    color: white;
+  }
+  
+  /* Links */
+  a:link,
+  a:visited {
+    color: black;
+    text-decoration: none;
+    background: #7bfbde;
+    border-radius: 4px;
+    padding: 0.5rem;
+    display: inline-block;
+    margin: 1rem;
+  }
+  
+  a:hover,
+  a:active {
+    background:#507CF2;
+    color: #fff;
+    transition: transform 1s;
+    
+    transform: scale(1.5);
+  }
+  
+  /* Image */
+  aside img {
+    /* fit image to container */
+    display: block;
+    max-width: 100%;
+  
+    /* full height image. Fit to container. no stretching. */
+    height: 100vh;
+    object-fit: cover;
+  }
+  
+  
+  h1 {
+    animation-name: fadeyIn;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    
+   /* stay at last keyframe */
+    animation-fill-mode: both;
+  }
+  
+  p {
+    animation-name: fadeyIn;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-timing-function: ease-in-out;
+    
+    /* stay at last keyframe */
+    animation-fill-mode: both;
+  }
+  
+  a {
+    animation-name: fadeyIn;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-timing-function: ease-in-out;
+    
+    /* stay at last keyframe */
+    animation-fill-mode: both;
+  }
+  
+  img {
+    animation-name: fadeyIn;
+    animation-duration: 1s;
+    animation-delay: 4s;
+    animation-timing-function: ease-in-out;
+    
+    /* stay at last keyframe */
+    animation-fill-mode: both;
+  }
+  
+  aside {
+    background-image: url('https://uploads-ssl.webflow.com/645c116c6148ce2dd7cef27c/6463ba64d8f5a0942b4e2fc2_Contact_Bg.png');
+    animation-name: fadeyIn;
+    animation-duration: 1s;
+    animation-delay: 4s;
+    animation-timing-function: ease-in-out;
+    
+    /* stay at last keyframe */
+    animation-fill-mode: both;
+  }
+  
+  /* Our Custom Animation */
+  @keyframes fadeyIn {
+    0%{
+      opacity: 0;
+    }
+    
+    100% {
+      opacity: 1;
+    }
+  }
+  
